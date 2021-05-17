@@ -1,0 +1,121 @@
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="Nam'ma Puducherry">
+    <title>Nam'ma Puducherry</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/images/icons/footer_logo.png">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+
+
+	<!-- Start Align Area -->
+	<div class="whole-wrap">
+		<div class="container box_1170">
+
+			
+			<div class="col-lg-12">
+                                <h2 class="title-1 m-b-25">Covid19 Health Care Centers In Puducherry</h2>
+                                <div class="table-responsive table--no-card m-b-40">
+                                    <table class="table table-borderless table-striped table-earning"  id="state-wise">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="bg-secondary">S.No</th>
+                                                        <th class="bg-info">Health Facility Name</th>
+                                                        <th class="bg-warning">Landmark</th>
+                                                        <th class="bg-primary">District</th>
+                                                        <th class="bg-success">Facility Type</th>
+                                                        <th class="bg-danger">Pincode</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="state-wise">
+                                                    
+                                                    
+                                                </tbody>
+                                          
+                                    </table>
+                                </div>
+                            </div>
+
+		</div>
+	</div>
+	<!-- End Align Area -->
+<!-- footer end  -->
+
+    <script type="text/javascript">
+        
+        $.ajax({
+    url:"https://api.covid19india.org/data.json",
+    type:"GET",
+    dataType:"JSON",
+    success : function(covid_data) {
+
+     //console.log(covid_data.records);
+
+
+     var newArray = covid_data.records.filter(function (el) {
+
+      return el.state_name === 'Maharashtra';
+
+    });
+
+     
+
+    console.log(newArray);
+
+       var sno = 1;
+
+    $.each(newArray, function(key, value){
+      
+
+      $("#state-wise").append("<tr>" + 
+        "<td>" + sno + " </td>" +
+        "<td>" + value.health_facility_name + "</td>" +
+        "<td>" + value.landmark + "</td>" +
+        "<td>" + value.district_name + "</td>" +
+        "<td>" + value.facility_type + "</td>" +
+        "<td>" + value.pincode + "</td>" +
+        "</tr>" );
+      sno++;
+
+
+    });
+
+
+     }
+     
+
+    });    
+
+    </script>
+
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+
+    <script src="js/jquery.slicknav.min.js"></script>
+    
+    <script src="js/main.js"></script>
+
+</body>
+</html> 

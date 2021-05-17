@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="Nam'ma Puducherry">
+    <title>Nam'ma Puducherry</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/images/icons/footer_logo.png">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+  
+    <style>
+       .bg
+        {
+            background-color:rgb(5, 61, 80);
+            color:white;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+
+	<!-- Start Align Area -->
+	<div class="whole-wrap">
+		<div class="container box_1170">
+      
+
+			
+			<div class="col-lg-12">
+                                <h2 class="title-1 m-b-25">Covid19 Health Care Centers In Goa</h2>
+                                <div class="table-responsive table--no-card m-b-40 ">
+                                    <table class="table table-bordered "  style=" color:rgb(5, 61, 80); background-color: lightblue;" id="state-wise">
+                                        <thead >
+                                          <tr >
+                                            <th class="bg">S.No</th>
+                                                        <th class="bg">Health Facility Name</th>
+                                                        <th class="bg">Block Name</th>
+                                                        <th class="bg">District</th>
+                                                        <th class="bg">Facility Type</th>
+                                                        <th class="bg">Pincode</th>
+                                          </tr>
+                                        </tbody id="state-wise">
+                                      </table>
+                                   
+                                </div>
+                            </div>
+
+		</div>
+	</div>
+	<!-- End Align Area -->
+<!-- footer end  -->
+
+    <script type="text/javascript">
+        
+        $.ajax({
+    url:"https://api.data.gov.in/resource/fced6df9-a360-4e08-8ca0-f283fc74ce15?api-key=579b464db66ec23bdd0000016eb95066326649877300f6063b2b8d14&format=json&offset=0&limit=3000",
+    type:"GET",
+    dataType:"JSON",
+    success : function(covid_data) {
+
+     console.log(covid_data.records);
+
+
+     var newArray = covid_data.records.filter(function (el) {
+
+      return el.state_name === 'Goa';
+
+    });
+
+     
+
+    console.log(newArray);
+
+       var sno = 1;
+
+    $.each(newArray, function(key, value){
+      
+
+      $("#state-wise").append("<tr>" + 
+        "<td>" + sno + " </td>" +
+        "<td>" + value.health_facility_name + "</td>" +
+        "<td>" + value.block_name + "</td>" +
+        "<td>" + value.district_name + "</td>" +
+        "<td>" + value.facility_type + "</td>" +
+        "<td>" + value.pincode + "</td>" +
+        "</tr>" );
+      sno++;
+
+
+    });
+
+
+     }
+     
+
+    });    
+
+    </script>
+
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+
+    <script src="js/jquery.slicknav.min.js"></script>
+    
+    <script src="js/main.js"></script>
+
+</body>
+</html> 

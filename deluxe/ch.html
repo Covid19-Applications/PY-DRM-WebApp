@@ -1,0 +1,539 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="Nam'ma Puducherry">
+    <title>Amgele Goa</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/images/icons/footer_logo.png">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+  <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Amgele Goa</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+			  <li class="nav-item"><a href="covid.html" class="nav-link">Covid-19 Dashboard</a></li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" name="service" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				 Services
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				  <a class="dropdown-item" href="covid-centers.html">Health Care Center</a>
+				  <a class="dropdown-item" href="medical.html">Medical</a>
+				  <a class="dropdown-item" href="donations.html">Donations</a>
+				  <a class="dropdown-item" href="govt.html">Government Services</a>
+				  <a class="dropdown-item" href="epass.html">Movement Pass</a>
+				  <a class="dropdown-item" href="volunteers.html">Volunteers</a>
+				  <a class="dropdown-item" href="bloodbank.html">Blood Bank</a>
+				  <a class="dropdown-item" href="hr.html">HR Recruitment</a>
+				  <a class="dropdown-item" href="course.html">Training courses</a>
+				</div>
+			  </li>
+	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <div class="hero-wrap" style="background-color: rgb(8, 39, 66); height: 80px;">      
+    </div> 
+
+<div class="container-fluid">
+  <br>
+  <div class="jumbotron" >
+  <h2 style="text-align: center; padding-top: 2px;">Global stats</h2>
+    <div class="row" >   
+    <div class="col-md-6"style="padding-top:2px" >
+    <img class="responsive" src="images/world.svg" width="600px" height="420px" style="padding-top:100px; padding-bottom: 30px;"> </div> 
+    <div class="col-md-6 " id="global" style="width: 600px; height: 600px;padding-bottom: 30px;"></div>     
+    </div>
+  </div>
+  <div class="jumbotron"  >
+    <h2 style="text-align: center; padding-top: 2px;">National stats</h2>
+    <div class="row">   
+        <div class="col-md-6" ><center><br><img class="responsive" src="images/i.png" style="width: 400px; height: 400px; "></center> </div> 
+        <div class="col-md-6" style="margin: auto; padding: 10px;" id="national" style="width: 800px; height: 800px;"></div>     
+    </div>
+  </div>
+  <div class="jumbotron">
+    <h2 style="text-align: center; padding-top: 2px;">Goa stats</h2>
+    <div class="row">   
+        <div class="col-md-6 " ><center><br><img src="images/goa.jpg" class="responsive" style="padding-left: 20px;width: 400px; height: 400px; padding-top: 20px;"></center> </div> 
+        <div class="col-md-6 " style="margin: auto; padding: 10px;" id="goa" style="width: 800px; height: 800px;"></div>     
+    </div> 
+    </div>  
+    
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <h2 class="title-1 m-b-25" style="text-align: center;">Covid19 Cases In Goa</h2>
+    <div class="table-responsive table--no-card m-b-40 ">
+        <table class="table table-bordered "  style=" color:rgb(5, 61, 80); background-color: lightblue;" id="state-wise">
+            <thead >
+              <tr >
+                <th class="bg">S.No</th>
+                            <th class="bg">District</th>
+                            <th class="bg">Active</th>
+                            <th class="bg">Confirmed</th>                            
+                            <th class="bg">Deceased</th>
+                            <th class="bg">Recovered</th>
+              </tr>
+            </tbody id="state-wise">
+          </table>
+       
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <h2 class="title-1 m-b-25" style="text-align: center;">Covid19 Cases In India</h2>
+    <div class="table-responsive table--no-card m-b-40 ">
+        <table class="table table-bordered "  style=" color:rgb(5, 61, 80); background-color: lightblue;" id="state">
+            <thead >
+              <tr >
+                <th class="bg">S.No</th>
+                            <th class="bg">District</th>
+                            <th class="bg">Active</th>
+                            <th class="bg">Confirmed</th>                            
+                            <th class="bg">Deceased</th>
+                            <th class="bg">Recovered</th>
+              </tr>
+            </tbody>
+          </table>
+       
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <h2 class="title-1 m-b-25" style="text-align: center;">Covid19 Countries with High Mortality</h2>
+    <div class="table-responsive table--no-card m-b-40 ">
+        <table class="table table-bordered "  style=" color:rgb(5, 61, 80); background-color: lightblue;" id="globe">
+            <thead >
+              <tr >
+                <th class="bg">S.No</th>
+                            <th class="bg">Country</th>
+                            <th class="bg">Total Confirmed</th>                            
+                            <th class="bg">Total Deceased</th>
+                            <th class="bg">Total Recovered</th>
+              </tr>
+            </tbody>
+          </table>
+       
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <h2 class="title-1 m-b-25" style="text-align: center;">Covid19 daily updates In Goa</h2>
+    <div class="table-responsive table--no-card m-b-40 ">
+        <table class="table table-bordered "  style=" color:rgb(5, 61, 80); background-color: lightblue;" id="date">
+            <thead >
+              <tr>
+                <th class="bg">S.No</th>
+                            <th class="bg">Date</th>
+                            <th class="bg">Total Tests</th>
+                            <th class="bg">Positive</th>                            
+                            <th class="bg">Negative</th>
+              </tr>
+            </tbody>
+          </table>
+       
+    </div>
+</div>
+
+<div class="jumbotron bg-light">
+  <div class="card-deck">
+  <div class="card" style="background-color: green; color: blanchedalmond;" ><h1>Green Zones</h1>
+  <h2 id="green"></h2></div>
+  <div class="card"id="orange" style="background-color: orange;" ></div>
+  <div class="card"id="red" style="background-color:red;" ></div>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <p id="news"></p>
+</div>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+ <script type="text/javascript">  
+ var x,y,z,t,x1,y1,z1;    
+        $.ajax({
+    url:"https://api.covid19api.com/summary",
+    type:"GET",
+    dataType:"JSON",
+    success : function(covid_data) {
+
+    x=covid_data.Global.TotalConfirmed;
+    y=covid_data.Global.TotalDeaths;
+    z=covid_data.Global.TotalRecovered;
+    t=x+y+z;   
+    
+    var newA=covid_data.Countries.filter(function (el)
+    {
+        return el.TotalDeaths>=5000;
+    });
+    
+     var newArray = covid_data.Countries.filter(function (el) {
+
+      return el.Country==="India";
+
+    });
+    
+      x1=newArray[0].TotalConfirmed;
+      y1=newArray[0].TotalDeaths;
+      z1=newArray[0].TotalRecovered;    
+    
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ["Element", "Density", { role: "style" } ],
+            ["Total Confirmed", x, "red"],
+            ["Total Deaths", y, "black"],
+            ["Total Recovered", z, "green"],
+          ]);
+    
+          var view = new google.visualization.DataView(data);
+          view.setColumns([0, 1,
+                           { calc: "stringify",
+                             sourceColumn: 1,
+                             type: "string",
+                             role: "annotation" },
+                           2]);
+    
+          var options = {
+            backgroundColor: "transparent",
+            width: 500,
+            height: 500,
+            bar: {groupWidth: "40%"},
+            legend: { position: "none" },
+          };
+          var chart = new google.visualization.ColumnChart(document.getElementById("global"));
+          chart.draw(view, options);
+      }
+      google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart1);
+
+        function drawChart1() {
+          var data = google.visualization.arrayToDataTable([
+            ["Element", "Density", { role: "style" } ],
+            ["Total Confirmed", x1, "red"],
+            ["Total Deaths", y1, "black"],
+            ["Total Recovered", z1, "green"],
+          ]);
+    
+          var view = new google.visualization.DataView(data);
+          view.setColumns([0, 1,
+                           { calc: "stringify",
+                             sourceColumn: 1,
+                             type: "string",
+                             role: "annotation" },
+                           2]);
+    
+          var options = {
+            backgroundColor: "transparent",
+            width: 500,
+            height: 500,
+            bar: {groupWidth: "40%"},
+            legend: { position: "none" },
+          };
+          var chart = new google.visualization.ColumnChart(document.getElementById("national"));
+          chart.draw(view, options);
+      }
+
+      var sno = 1;
+
+$.each(newA, function(key, value){
+  
+
+  $("#globe").append("<tr>" + 
+    "<td>" + sno + " </td>" +
+    "<td>" + value.Country + "</td>" +
+    "<td>" + value.TotalConfirmed + "</td>" +
+    "<td>" + value.TotalDeaths + "</td>" +
+    "<td>" + value.TotalRecovered + "</td>" +
+    "</tr>" );
+  sno++;
+
+
+});
+
+    
+     
+    }
+    
+        });
+    
+      </script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">  
+    var x2,y2,z2;    
+           $.ajax({
+       url:"https://api.covid19india.org/data.json",
+       type:"GET",
+       dataType:"JSON",
+       success : function(covid_data) {  
+        var newArr = covid_data.statewise.filter(function (el) {
+        return el.state != 'Total';
+        });
+
+        var newArray = covid_data.statewise.filter(function (el) {   
+         return el.state=='Goa';   
+       });      
+         x2=parseInt(newArray[0].confirmed);
+         y2=parseInt(newArray[0].deaths);
+         z2=parseInt(newArray[0].recovered);    
+       
+       google.charts.load("current", {packages:["corechart"]});
+       google.charts.setOnLoadCallback(drawChart2);
+   
+           function drawChart2() {
+             var data = google.visualization.arrayToDataTable([
+               ["Element", "Density", { role: "style" } ],
+               ["Total Confirmed", x2, "red"],
+               ["Total Deaths", y2, "black"],
+               ["Total Recovered", z2, "green"],
+             ]);
+       
+             var view = new google.visualization.DataView(data);
+             view.setColumns([0, 1,
+                              { calc: "stringify",
+                                sourceColumn: 1,
+                                type: "string",
+                                role: "annotation" },
+                              2]);
+       
+             var options = {
+              backgroundColor: "transparent",
+               width: 500,
+               height: 500,
+               bar: {groupWidth: "30%"},
+               legend: { position: "none" },
+             };
+             var chart = new google.visualization.ColumnChart(document.getElementById("goa"));
+             chart.draw(view, options);
+         }
+         //console.log(covid_data.statewise);
+         var sno = 1;
+
+$.each(newArr, function(key, value){
+  
+
+  $("#state").append("<tr>" + 
+    "<td>" + sno + " </td>" +
+    "<td>" + value.state + "</td>" +
+    "<td>" + value.active + "</td>" +
+    "<td>" + value.confirmed + "</td>" +
+    "<td>" + value.deaths + "</td>" +
+    "<td>" + value.recovered + "</td>" +
+    "</tr>" );
+  sno++;
+
+
+});
+
+         
+         
+    }
+     });
+
+
+</script>
+
+<script type="text/javascript">
+$.ajax({
+    url:"https://api.covid19india.org/v2/state_district_wise.json",
+    type:"GET",
+    typeof:"JSON",
+    success: function(covid_data){  
+        var y;
+        for(i=0;i<covid_data.length;i++)
+        {
+            if(covid_data[i].state=='Goa')
+            y=i;
+        }
+        var newArray = covid_data[y].districtData.filter(function (el) {
+   
+         return el;
+   
+       });
+       var sno = 1;
+
+   $.each(newArray, function(key, value){
+     
+
+     $("#state-wise").append("<tr>" + 
+       "<td>" + sno + " </td>" +
+       "<td>" + value.district + "</td>" +
+       "<td>" + value.active + "</td>" +
+       "<td>" + value.confirmed + "</td>" +
+       "<td>" + value.deceased + "</td>" +
+       "<td>" + value.recovered + "</td>" +
+       "</tr>" );
+     sno++;
+
+
+   });
+
+
+    }
+    
+
+   });    
+</script>
+
+<script>
+    $.ajax({
+        url:"https://api.covid19india.org/state_test_data.json",
+        type:"GET",
+        typeof:"JSON",
+        success: function(covid_data){
+            //console.log(covid_data.states_tested_data[1]);
+            
+            var n=covid_data.states_tested_data.filter(function(el)
+            {
+                return el.state=='Goa';
+            });
+        //console.log(n);
+
+        var sno = 1;
+
+$.each(n, function(key, value){
+  
+
+  $("#date").append("<tr>" + 
+    "<td>" + sno + " </td>" +
+    "<td>" + value.updatedon + "</td>" +
+    "<td>" + value.totaltested + "</td>" +
+    "<td>" + value.positive + "</td>" +
+    "<td>" + value.negative + "</td>" +
+    "</tr>" );
+  sno++;
+
+
+});
+
+        }
+    })
+</script>
+
+<script type="text/javascript">
+$.ajax({
+  url:"https://api.covid19india.org/zones.json",
+  type:"GET",
+  typeof:"JSON",
+  success: function(covid_data){
+    var g=0,o=0,r=0;
+    var gz='',oz='',rz='';
+    var z=covid_data.zones.filter(function(el)
+    {
+      return el.state=='Goa';
+    });
+    for(var i=0;i<z.length;i++)
+    {
+      if(z[i].zone=="Green"){
+        g++;
+       gz="\n"+gz+"\n"+z[i].district;
+       document.getElementById("green").innerHTML=gz;
+      }     
+      if(z[i].zone=="Orange")
+      {
+       o++;
+       oz=oz+"\n"+z[i].district ;
+      }     
+      if(z[i].zone=="Red")
+      {
+       r++;
+       rz=rz+"\n"+z[i].district ;
+      }     
+    }
+    
+  }
+})
+</script>
+
+<script type="text/javascript">
+  $.ajax({
+    url:"http://newsapi.org/v2/everything?q=covid19&India&apiKey=d12fefc09d7f499dbe25039a79633be2",
+    type:"GET",
+    typeof:"JSON",
+    success: function(news)
+    {
+      console.log(news);
+    }
+  })
+</script>
+      
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h1 class="ftco-heading-1" style="color: lightcyan;">Amgele Goa</h1>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-5">
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="py-2 d-block">Home</a></li>
+              <li><a href="covid.html" class="py-2 d-block">Covid-19 Dashboard</a></li>
+              <li><a href="#service" class="py-2 d-block">Services</a></li>
+              <li><a href="blog.html" class="py-2 d-block">Blog</a></li>
+              <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">India</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+
+<script src="js/jquery.slicknav.min.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

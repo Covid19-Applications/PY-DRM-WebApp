@@ -1,0 +1,190 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="Nam'ma Puducherry">
+    <title>Amgele Goa</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/images/icons/footer_logo.png">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+  <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Amgele Goa</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+			  <li class="nav-item"><a href="covid.html" class="nav-link">Covid-19 Dashboard</a></li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" name="service" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				 Services
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				  <a class="dropdown-item" href="covid-centers.html">Health Care Center</a>
+				  <a class="dropdown-item" href="medical.html">Medical</a>
+				  <a class="dropdown-item" href="donations.html">Donations</a>
+				  <a class="dropdown-item" href="govt.html">Government Services</a>
+				  <a class="dropdown-item" href="epass.html">Movement Pass</a>
+				  <a class="dropdown-item" href="volunteers.html">Volunteers</a>
+				  <a class="dropdown-item" href="bloodbank.html">Blood Bank</a>
+				  <a class="dropdown-item" href="hr.html">HR Recruitment</a>
+				  <a class="dropdown-item" href="course.html">Training courses</a>
+				</div>
+			  </li>
+	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <div class="hero-wrap" style="background-color: rgb(8, 39, 66); height: 80px;">      
+    </div> 
+
+    <div class="container-fluid bg-light text-center" >
+        <img src="images/bb.jpg" class="responsive" style="height: 450px;">
+     </div>
+
+        <div class="container-fluid text-center">
+            <h1>Blood banks in Goa</h1>
+        </div>
+
+        <div class="jumbotron">
+          <table class="table table-hover table-dark table-bordered" id="bb">
+            <thead>
+              <tr>
+                <th scope="col">S.no</th>
+                <th scope="col">Blood Bank Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">City</th>
+                <th scope="col">District</th>
+                <th scope="col">Category</th>
+                <th scope="col">Mobile No.</th>
+              </tr>
+            </thead>
+          </table>
+          </div>
+
+          <script type="text/javascript">
+            $.ajax({
+              url:"https://api.data.gov.in/resource/fced6df9-a360-4e08-8ca0-f283fc74ce15?api-key=579b464db66ec23bdd0000016eb95066326649877300f6063b2b8d14&format=json&offset=0&limit=3000",
+              type:"GET",
+              dataType:"JSON",
+              success: function(bb_data){
+                var n=bb_data.records.filter(function(el){
+                 return el.__state==='Goa';
+                });
+                //console.log(n);
+              
+              var sno = 1;
+
+    $.each(n, function(key, value){
+      
+
+      $("#bb").append("<tr>" + 
+        "<td>" + sno + " </td>" +
+        "<td>" + value._blood_bank_name + "</td>" +
+        "<td>" + value.__address + "</td>" +
+        "<td>" + value.__city + "</td>" +
+        "<td>" + value.__district + "</td>" +
+        "<td>" + value.__category + "</td>" +
+        "<td>" + value._mobile+"</td>"+
+        "</tr>" );
+      sno++;
+
+
+    });
+
+
+     }
+     
+
+    });    
+
+
+  </script>
+  <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h1 class="ftco-heading-1" style="color: lightcyan;">Amgele Goa</h1>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-5">
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="py-2 d-block">Home</a></li>
+              <li><a href="covid.html" class="py-2 d-block">Covid-19 Dashboard</a></li>
+              <li><a href="#service" class="py-2 d-block">Services</a></li>
+              <li><a href="blog.html" class="py-2 d-block">Blog</a></li>
+              <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">India</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+  
+</body>
+</html>
